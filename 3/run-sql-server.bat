@@ -1,1 +1,0 @@
-docker run --name testdb -d -p 1433:1433 -e sa_password=All7even -e ACCEPT_EULA=Y microsoft/mssql-server-windows-developer
