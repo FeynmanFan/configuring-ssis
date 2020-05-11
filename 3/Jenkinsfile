@@ -1,0 +1,11 @@
+node {
+    stage('SCM') {
+		git changelog: false, poll: false, url: 'https://github.com/FeynmanFan/configuring-ssis.git'
+    }
+    stage('Database schema upgrade') {
+        echo 'Upgrading target schema'
+    }
+    stage('Execute Package') {
+        bat label: 'Executing package', script: 'dtexec /f ./3/Globomantics/package.dtsx /de ssisConfig \\Package.Variables[User::IncomingFilePath];C:\\Code\\Incoming\\\\'
+    }
+ }
