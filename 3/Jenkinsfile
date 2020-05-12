@@ -6,6 +6,6 @@ node {
         echo 'Upgrading target schema'
     }
     stage('Execute Package') {
-        bat label: 'Executing package', script: 'dtexec /f ./3/Globomantics/package.dtsx /SET "\\Package.Variables[User::IncomingFilePath]\\";"C:\\Code\\Incoming\\" /SET "\\Package.Connections[Target Sql Server DB].Properties[Password]\\";ssisConfigPassword'
+        bat label: 'Executing package', script: 'dtexec /f /de ssisConfig ./3/Globomantics/package.dtsx /SET "\"\Package.Variables[User::IncomingFilePath]\"";"\"C:\Code\Incoming\\"" SET "\"\Package.Connections[Target Sql Server DB].Properties[Password]\"";ssisConfigPassword'
     }
  }
