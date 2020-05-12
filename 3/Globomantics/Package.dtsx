@@ -6,14 +6,15 @@
   DTS:CreatorComputerName="WINDOWS-TP27JOI"
   DTS:CreatorName="WINDOWS-TP27JOI\chris"
   DTS:DTSID="{4C9D5482-1E03-403D-99DC-501B89BC5756}"
+  DTS:EnableConfig="True"
   DTS:ExecutableType="Microsoft.Package"
   DTS:LastModifiedProductVersion="15.0.2000.94"
   DTS:LocaleID="1033"
   DTS:ObjectName="Package"
   DTS:PackageType="5"
-  DTS:ProtectionLevel="2"
-  DTS:VersionBuild="63"
-  DTS:VersionGUID="{B62E3620-7F14-422B-9305-45F17874CF05}">
+  DTS:ProtectionLevel="0"
+  DTS:VersionBuild="67"
+  DTS:VersionGUID="{8290608B-AAE2-4FD5-AEBC-6CF0CDB00559}">
   <DTS:Property
     DTS:Name="PackageFormatVersion">8</DTS:Property>
   <DTS:ConnectionManagers>
@@ -104,28 +105,29 @@
       </DTS:ObjectData>
     </DTS:ConnectionManager>
     <DTS:ConnectionManager
-      DTS:refId="Package.ConnectionManagers[Target Sql Server DB]"
+      DTS:refId="Package.ConnectionManagers[Target_Sql_Server_DB]"
       DTS:CreationName="OLEDB"
       DTS:DelayValidation="True"
       DTS:DTSID="{DA5B12EA-2B47-4B6F-918C-8DF33A51A8EE}"
-      DTS:ObjectName="Target Sql Server DB">
+      DTS:ObjectName="Target_Sql_Server_DB">
       <DTS:ObjectData>
         <DTS:ConnectionManager
           DTS:ConnectionString="Data Source=.;User ID=sa;Initial Catalog=Globomantics;Provider=SQLOLEDB.1;Persist Security Info=True;Application Name=SSIS-Package-{DA5B12EA-2B47-4B6F-918C-8DF33A51A8EE}Target Sql Server DB;">
-          <EncryptedData
-            Type="http://www.w3.org/2001/04/xmlenc#Element"
-            Salt="Icl3T8RwzyQ="
-            IV="GEa70SiHwqzoOYspW/SOcQ==" xmlns="http://www.w3.org/2001/04/xmlenc#">
-            <EncryptionMethod
-              Algorithm="http://www.w3.org/2001/04/xmlenc#aes256-cbc" />
-            <CipherData>
-              <CipherValue>GEa70SiHwqzoOYspW/SOcQeFNwLUwYv+hiJDVI+UMvkMmD6FUjVvQha4Nr5mqc+NDpREuM7qMZIp7li9Uq7wUxuuUh8rNk0VhSKgua+KCRI/7Odp4opo8jCJmbv7FTwR3xFqtvFfPA7gv3w4xINjY93giKoQLCsLv7zZsSU5feESsa2T8vCBjVZKLUWqDFg1</CipherValue>
-            </CipherData>
-          </EncryptedData>
+          <DTS:Password
+            DTS:Name="Password"
+            Sensitive="1"></DTS:Password>
         </DTS:ConnectionManager>
       </DTS:ObjectData>
     </DTS:ConnectionManager>
   </DTS:ConnectionManagers>
+  <DTS:Configurations>
+    <DTS:Configuration
+      DTS:ConfigurationString="C:\Users\chris\Google Drive\PluralSight\Configuring and Deploying SSIS Packages\Code\3\Globomantics\test.dtsConfig"
+      DTS:ConfigurationType="1"
+      DTS:CreationName=""
+      DTS:DTSID="{A5E9F437-9EF6-4528-AD61-C45BEA4E84E6}"
+      DTS:ObjectName="test" />
+  </DTS:Configurations>
   <DTS:Variables>
     <DTS:Variable
       DTS:CreationName=""
@@ -320,8 +322,8 @@
               <connections>
                 <connection
                   refId="Package\Sync Completed Activities\Existing Employees.Connections[OleDbConnection]"
-                  connectionManagerID="Package.ConnectionManagers[Target Sql Server DB]"
-                  connectionManagerRefId="Package.ConnectionManagers[Target Sql Server DB]"
+                  connectionManagerID="Package.ConnectionManagers[Target_Sql_Server_DB]"
+                  connectionManagerRefId="Package.ConnectionManagers[Target_Sql_Server_DB]"
                   description="The OLE DB runtime connection used to access the database."
                   name="OleDbConnection" />
               </connections>
@@ -790,8 +792,8 @@
               <connections>
                 <connection
                   refId="Package\Sync Completed Activities\Target Sql Server.Connections[OleDbConnection]"
-                  connectionManagerID="Package.ConnectionManagers[Target Sql Server DB]"
-                  connectionManagerRefId="Package.ConnectionManagers[Target Sql Server DB]"
+                  connectionManagerID="Package.ConnectionManagers[Target_Sql_Server_DB]"
+                  connectionManagerRefId="Package.ConnectionManagers[Target_Sql_Server_DB]"
                   description="The OLE DB runtime connection used to access the database."
                   name="OleDbConnection" />
               </connections>
@@ -1197,8 +1199,8 @@
               <connections>
                 <connection
                   refId="Package\Sync Employees\Existing Employees.Connections[OleDbConnection]"
-                  connectionManagerID="Package.ConnectionManagers[Target Sql Server DB]"
-                  connectionManagerRefId="Package.ConnectionManagers[Target Sql Server DB]"
+                  connectionManagerID="Package.ConnectionManagers[Target_Sql_Server_DB]"
+                  connectionManagerRefId="Package.ConnectionManagers[Target_Sql_Server_DB]"
                   description="The OLE DB runtime connection used to access the database."
                   name="OleDbConnection" />
               </connections>
@@ -1769,8 +1771,8 @@
               <connections>
                 <connection
                   refId="Package\Sync Employees\Target Sql Server.Connections[OleDbConnection]"
-                  connectionManagerID="Package.ConnectionManagers[Target Sql Server DB]"
-                  connectionManagerRefId="Package.ConnectionManagers[Target Sql Server DB]"
+                  connectionManagerID="Package.ConnectionManagers[Target_Sql_Server_DB]"
+                  connectionManagerRefId="Package.ConnectionManagers[Target_Sql_Server_DB]"
                   description="The OLE DB runtime connection used to access the database."
                   name="OleDbConnection" />
               </connections>
