@@ -8,6 +8,9 @@ node {
     stage('Create db inside container') {
         bat label: 'Set up DB', script: 'sqlcmd -S localhost,1434 -i ".\\5\\globomantics.sql" -U sa -P ssisConfigPassword1'
     }
+	stage('Let Sql Server start up'){
+		sleep 5;
+	}
     stage('Execute Package') {
         bat label: 'Executing package', script: 'dtexec /f .\\5\\Globomantics\\Package.dtsx /SET "\\"\\Package.Variables[User::IncomingFilePath]\\"";"\\"C:\\\\Code\\\\Incoming\\\\"" /SET "\\"\\Package.Connections[Target_Sql_Server_DB].Properties[Password]\\"";ssisConfigPassword1 /SET "\\"\\Package.Connections[Target_Sql_Server_DB].Properties[ServerName]\\"";"\\"localhost,1434\\"" '
     }
