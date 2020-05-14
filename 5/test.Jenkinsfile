@@ -9,7 +9,7 @@ node {
         bat label: 'Set up DB', script: 'sqlcmd -S localhost,1434 -i "C:\\Users\\chris\\Google Drive\\PluralSight\\Configuring and Deploying SSIS Packages\\Code\\5\\globomantics.sql" -U sa -P ssisConfigPassword1'
     }
     stage('Execute Package') {
-        bat label: 'Executing package', script: 'dtexec /f .\\5\\Globomantics\\Package.dtsx /SET "\"\Package.Variables[User::IncomingFilePath]\"";"\"C:\Code\Incoming\\""  /SET "\"\Package.Connections[Target_Sql_Server_DB].Properties[Password]\"";ssisConfigPassword1 /SET "\"\Package.Connections[Target_Sql_Server_DB].Properties[ServerName]\"";localhost,1434';
+        bat label: 'Executing package', script: 'dtexec /f .\\5\\Globomantics\\Package.dtsx /SET "\\"\\Package.Variables[User::IncomingFilePath]\\"";"\\"C:\\\\Code\\\\Incoming\\\\"" /SET "\\"\\Package.Connections[Target_Sql_Server_DB].Properties[Password]\\"";ssisConfigPassword1 /SET "\\"\\Package.Connections[Target_Sql_Server_DB].Properties[ServerName]\\"";"\\"localhost,1434\\"" '
     }
 	stage('Clean-up')
 	{
