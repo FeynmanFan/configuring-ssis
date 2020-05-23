@@ -12,8 +12,8 @@
   DTS:ObjectName="Package"
   DTS:PackageType="5"
   DTS:ProtectionLevel="0"
-  DTS:VersionBuild="91"
-  DTS:VersionGUID="{6CB176EB-F7A4-4C67-95EF-DA5A36760E02}">
+  DTS:VersionBuild="92"
+  DTS:VersionGUID="{231DB2C1-1E8A-4263-BC13-DC318ACA7B55}">
   <DTS:Property
     DTS:Name="PackageFormatVersion">8</DTS:Property>
   <DTS:ConnectionManagers>
@@ -2533,7 +2533,7 @@
     </LayoutInfo>
   </TaskHost>
   <PipelineComponentMetadata
-    design-time-name="Package\Sync Employees\Existing Employees">
+    design-time-name="Package\Sync Employees\Target Sql Server">
     <Properties>
       <Property>
         <Name>DataSourceViewID</Name>
@@ -2546,7 +2546,7 @@
     </Properties>
   </PipelineComponentMetadata>
   <PipelineComponentMetadata
-    design-time-name="Package\Sync Employees\Target Sql Server">
+    design-time-name="Package\Sync Employees\Existing Employees">
     <Properties>
       <Property>
         <Name>DataSourceViewID</Name>
