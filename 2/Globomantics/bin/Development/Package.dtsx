@@ -12,8 +12,8 @@
   DTS:ObjectName="Package"
   DTS:PackageType="5"
   DTS:ProtectionLevel="2"
-  DTS:VersionBuild="42"
-  DTS:VersionGUID="{66B90D59-C671-4103-9084-6A95B8F6E74B}">
+  DTS:VersionBuild="43"
+  DTS:VersionGUID="{DEAB631F-C20A-4F5C-8FDE-E24C52AFD237}">
   <DTS:Property
     DTS:Name="PackageFormatVersion">8</DTS:Property>
   <DTS:ConnectionManagers>
@@ -30,7 +30,7 @@
           DTS:RowDelimiter=""
           DTS:TextQualifier="_x003C_none_x003E_"
           DTS:CodePage="1252"
-          DTS:ConnectionString="C:\Users\chris\Google Drive\PluralSight\Configuring and Deploying SSIS Packages\Code\Globomantics\Incoming\employees.txt">
+          DTS:ConnectionString="C:\Users\chris\Google Drive\PluralSight\Configuring and Deploying SSIS Packages\Code\2\Globomantics\Incoming\employees.txt">
           <DTS:FlatFileColumns>
             <DTS:FlatFileColumn
               DTS:ColumnType="Delimited"
@@ -39,7 +39,7 @@
               DTS:DataType="129"
               DTS:TextQualified="True"
               DTS:ObjectName="Id"
-              DTS:DTSID="{959A1607-7134-46C2-B364-F356DAEE710E}"
+              DTS:DTSID="{0A521824-B7FE-4EA4-8A68-F66B190E1EDC}"
               DTS:CreationName="" />
             <DTS:FlatFileColumn
               DTS:ColumnType="Delimited"
@@ -48,7 +48,7 @@
               DTS:DataType="130"
               DTS:TextQualified="True"
               DTS:ObjectName="FirstName"
-              DTS:DTSID="{17576784-C326-4E77-970E-EB7175C3B54F}"
+              DTS:DTSID="{1732BEB4-48EB-4686-8C5D-E43ADBC58BE3}"
               DTS:CreationName="" />
             <DTS:FlatFileColumn
               DTS:ColumnType="Delimited"
@@ -57,7 +57,7 @@
               DTS:DataType="130"
               DTS:TextQualified="True"
               DTS:ObjectName="LastName"
-              DTS:DTSID="{AE29AC0B-4708-4E21-A44D-24939C427A58}"
+              DTS:DTSID="{7D3103DD-284D-4DEA-B461-8992A208B113}"
               DTS:CreationName="" />
           </DTS:FlatFileColumns>
         </DTS:ConnectionManager>
@@ -74,12 +74,12 @@
           DTS:ConnectionString="Data Source=.;User ID=sa;Initial Catalog=Globomantics;Provider=SQLOLEDB.1;Persist Security Info=True;Application Name=SSIS-Package-{DA5B12EA-2B47-4B6F-918C-8DF33A51A8EE}Target Sql Server DB;">
           <EncryptedData
             Type="http://www.w3.org/2001/04/xmlenc#Element"
-            Salt="yVkfiIt5f24="
-            IV="hqyET2HwFcrvFh7O48dSdA==" xmlns="http://www.w3.org/2001/04/xmlenc#">
+            Salt="s90dVxm7QEs="
+            IV="0ghZrb3VZ0HDzwVw+8ZPcg==" xmlns="http://www.w3.org/2001/04/xmlenc#">
             <EncryptionMethod
               Algorithm="http://www.w3.org/2001/04/xmlenc#aes256-cbc" />
             <CipherData>
-              <CipherValue>hqyET2HwFcrvFh7O48dSdBnJeZwewyMLKPMxRjS7Xbvve/xNsUDVY3/AATUG4UF/D5oiLVd/jwFcsibDFEBJSAMDTnevboG7aDpcsdP+Lcx0nQ3VNm4vLPxyxMt0qrnIhhoB60dpAV4F8Qu8fLthmPdj1pkarIpltFf/XxHTAK3O3pFEsnNV1cX1Z61FHZWI</CipherValue>
+              <CipherValue>0ghZrb3VZ0HDzwVw+8ZPcmUNMUUfXMT5xrCB6fmGqLPA/GN5OhJwGQEArvYB6dHzwvxqj3h9+q4OEYnthIRQOgy0O3m815DA2344y1krWqBbZdVygDcq+6gSpY7F7TFkWMX4twcT3AnPXSmXOOszYcwOTtGTEiPkcbDwidVSmxJksDiK/VL7mkIEP1tJSv+X</CipherValue>
             </CipherData>
           </EncryptedData>
         </DTS:ConnectionManager>
@@ -1106,14 +1106,6 @@
       <GraphLayout
         Capacity="16" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml" xmlns:mssgm="clr-namespace:Microsoft.SqlServer.Graph.Model;assembly=Microsoft.SqlServer.Graph">
         <NodeLayout
-          Size="204,42"
-          Id="Package\Sync Employees\WHERE ExistingID is null"
-          TopLeft="258,413.5" />
-        <NodeLayout
-          Size="175,42"
-          Id="Package\Sync Employees\Existing Employees"
-          TopLeft="15.5,107.5" />
-        <NodeLayout
           Size="195,42"
           Id="Package\Sync Employees\Sort Existing Data By Id"
           TopLeft="5.5,209.5" />
@@ -1122,13 +1114,59 @@
           Id="Package\Sync Employees\Join Flatfile to Existing data"
           TopLeft="253.5,311.5" />
         <NodeLayout
-          Size="154,42"
-          Id="Package\Sync Employees\Employees File"
-          TopLeft="283,5.5" />
+          Size="204,42"
+          Id="Package\Sync Employees\WHERE ExistingID is null"
+          TopLeft="258,413.5" />
         <NodeLayout
           Size="189,42"
           Id="Package\Sync Employees\Sort Flatfile Data By Id"
           TopLeft="265.5,107.5" />
+        <NodeLayout
+          Size="175,42"
+          Id="Package\Sync Employees\Existing Employees"
+          TopLeft="15.5,107.5" />
+        <NodeLayout
+          Size="165,42"
+          Id="Package\Sync Employees\Target Sql Server"
+          TopLeft="277.5,515.5" />
+        <NodeLayout
+          Size="154,42"
+          Id="Package\Sync Employees\Employees File"
+          TopLeft="283,5.5" />
+        <EdgeLayout
+          Id="Package\Sync Employees.Paths[Sort Output1]"
+          TopLeft="360,149.5">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="34.1666666666666,162"
+              Start="0,0"
+              End="34.1666666666666,154.5">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,92.475302889096" />
+                  <mssgle:CubicBezierSegment
+                    Point1="0,92.475302889096"
+                    Point2="0,96.475302889096"
+                    Point3="4,96.475302889096" />
+                  <mssgle:LineSegment
+                    End="30.1666666666666,96.475302889096" />
+                  <mssgle:CubicBezierSegment
+                    Point1="30.1666666666666,96.475302889096"
+                    Point2="34.1666666666666,96.475302889096"
+                    Point3="34.1666666666666,100.475302889096" />
+                  <mssgle:LineSegment
+                    End="34.1666666666666,154.5" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
         <EdgeLayout
           Id="Package\Sync Employees.Paths[Sort Output]"
           TopLeft="103,251.5">
@@ -1186,6 +1224,30 @@
           </EdgeLayout.Labels>
         </EdgeLayout>
         <EdgeLayout
+          Id="Package\Sync Employees.Paths[New Employees]"
+          TopLeft="360,455.5">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="0,60"
+              Start="0,0"
+              End="0,52.5">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,52.5" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <mssgm:EdgeLabel
+              BoundingBox="-35.387578125,20.4453125,70.77515625,11.609375"
+              RelativePosition="Any" />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <EdgeLayout
           Id="Package\Sync Employees.Paths[Merge Join Output]"
           TopLeft="360,353.5">
           <EdgeLayout.Curve>
@@ -1221,68 +1283,6 @@
                   Capacity="5">
                   <mssgle:LineSegment
                     End="0,52.5" />
-                </mssgle:SegmentCollection>
-              </mssgle:Curve.Segments>
-            </mssgle:Curve>
-          </EdgeLayout.Curve>
-          <EdgeLayout.Labels>
-            <EdgeLabelCollection />
-          </EdgeLayout.Labels>
-        </EdgeLayout>
-        <NodeLayout
-          Size="165,42"
-          Id="Package\Sync Employees\Target Sql Server"
-          TopLeft="277.5,515.5" />
-        <EdgeLayout
-          Id="Package\Sync Employees.Paths[New Employees]"
-          TopLeft="360,455.5">
-          <EdgeLayout.Curve>
-            <mssgle:Curve
-              StartConnector="{assembly:Null}"
-              EndConnector="0,60"
-              Start="0,0"
-              End="0,52.5">
-              <mssgle:Curve.Segments>
-                <mssgle:SegmentCollection
-                  Capacity="5">
-                  <mssgle:LineSegment
-                    End="0,52.5" />
-                </mssgle:SegmentCollection>
-              </mssgle:Curve.Segments>
-            </mssgle:Curve>
-          </EdgeLayout.Curve>
-          <EdgeLayout.Labels>
-            <mssgm:EdgeLabel
-              BoundingBox="-35.387578125,20.4453125,70.77515625,11.609375"
-              RelativePosition="Any" />
-          </EdgeLayout.Labels>
-        </EdgeLayout>
-        <EdgeLayout
-          Id="Package\Sync Employees.Paths[Sort Output1]"
-          TopLeft="360,149.5">
-          <EdgeLayout.Curve>
-            <mssgle:Curve
-              StartConnector="{assembly:Null}"
-              EndConnector="34.1666666666666,162"
-              Start="0,0"
-              End="34.1666666666666,154.5">
-              <mssgle:Curve.Segments>
-                <mssgle:SegmentCollection
-                  Capacity="5">
-                  <mssgle:LineSegment
-                    End="0,92.475302889096" />
-                  <mssgle:CubicBezierSegment
-                    Point1="0,92.475302889096"
-                    Point2="0,96.475302889096"
-                    Point3="4,96.475302889096" />
-                  <mssgle:LineSegment
-                    End="30.1666666666666,96.475302889096" />
-                  <mssgle:CubicBezierSegment
-                    Point1="30.1666666666666,96.475302889096"
-                    Point2="34.1666666666666,96.475302889096"
-                    Point3="34.1666666666666,100.475302889096" />
-                  <mssgle:LineSegment
-                    End="34.1666666666666,154.5" />
                 </mssgle:SegmentCollection>
               </mssgle:Curve.Segments>
             </mssgle:Curve>
